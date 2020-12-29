@@ -2,7 +2,7 @@ package com.kmknowles.entity;
 
 public class ServiceStatus {
 
-    private String serviceID = "";
+    private int serviceID = -1;
     private String serviceName= "";
     private String serviceDescription="";
     private String serviceSupportContact="";
@@ -10,7 +10,7 @@ public class ServiceStatus {
 
     public ServiceStatus() { }
 
-    public ServiceStatus(String serviceID, String serviceName, String serviceDescription, String serviceSupportContact, String serviceSupportContactEmail) {
+    public ServiceStatus(int serviceID, String serviceName, String serviceDescription, String serviceSupportContact, String serviceSupportContactEmail) {
         this.serviceID = serviceID;
         this.serviceName = serviceName;
         this.serviceDescription = serviceDescription;
@@ -18,11 +18,11 @@ public class ServiceStatus {
         this.serviceSupportContactEmail = serviceSupportContactEmail;
     }
 
-    public String getServiceID() {
+    public int getServiceID() {
         return serviceID;
     }
 
-    public void setServiceID(String serviceID) {
+    public void setServiceID(int serviceID) {
         this.serviceID = serviceID;
     }
 
