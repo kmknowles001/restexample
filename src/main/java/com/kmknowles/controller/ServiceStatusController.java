@@ -2,6 +2,7 @@ package com.kmknowles.controller;
 
 import com.kmknowles.entity.ServiceStatus;
 import com.kmknowles.service.ServiceStatusService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ public class ServiceStatusController {
         serviceStatusService = new ServiceStatusService();
     }
 
-    @RequestMapping(method= RequestMethod.GET)
+    @RequestMapping(method= RequestMethod.GET) @CrossOrigin()
     public ServiceStatus getServiceStatement(){
         return serviceStatusService.getServiceStatus();
     }
